@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Form.css';
 
 
-const Form =()=>{
+const Form =(props)=>{
     const [enterTitle, setTitle] = useState("")
     const [enterDate, setDate]   =useState('')
     const [enterAmount, setAmount]   =useState('')
@@ -28,7 +28,10 @@ const SumitPage = (event)=>{
             date:new Date(enterDate),
 
        };
+
        console.log(SumitHold);
+
+       props.onSaveExpanseData();
        setTitle('')
        setDate('')
        setAmount('')

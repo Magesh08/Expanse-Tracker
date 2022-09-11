@@ -32,12 +32,15 @@ function App(props) {
     },
   ];
   
-  
+  const addExpansehandler = expanses => {
+    console.log("hi bro");
+    console.log(expanses);
+  }
   return (
     
     
     <div>
-        <NewExpanse/>
+        <NewExpanse onAddExpanse={addExpansehandler}/>
       <div>
         
       </div>
